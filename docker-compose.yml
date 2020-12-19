@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+    portytex:
+        build: .
+        image: portytex
+        ports:
+            - "5900:5900"
+        volumes:
+            - ./shared_folder:/root/Desktop/shared_folder
+            - portytex_root:/root/
+volumes:
+    portytex_root:

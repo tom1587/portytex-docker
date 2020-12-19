@@ -1,0 +1,13 @@
+#!/bin/bash
+kill -9 `pidof xfce4-power-manager`
+xset s off
+
+echo "Updating MikTeX please wait..."
+mpm --admin --update-db --update --verbose
+echo "Done"
+printf "exiting"
+for i in {0 ... 5}
+do
+	printf "."
+	sleep 1
+done
